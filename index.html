@@ -6,7 +6,8 @@
     <title>Exercício de Introdução à Computação</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', cursive; 
+            /* font-family: 'font-family: Arial, sans-serif;', cursive;  */
             background-color: #f0f0f0;
         }
         div {
@@ -18,7 +19,7 @@
     </style>
 </head>
 <body>
-    <h1>📚 Introdução à Computação</h1>
+    <h1>📚 Introdução à Computação &hearts;</h1>
     
     <div>
         <h2>O que é um computador?</h2>
@@ -47,6 +48,194 @@
         <h2>Importância da Computação</h2>
         <p>A computação revolucionou a sociedade moderna, sendo essencial em áreas como:</p>
         <p>- Medicina<br>- Engenharia<br>- Comunicação<br>- Pesquisa Científica</p>
+    </div>
+    
+        <hr>
+        
+    <div>
+        <h3>O que são entidades HTML?</h3>
+        <p>Utilizar alguns caracteres pode ser bastante trabalhoso, como no caso de &lt; (escrito com <strong>&amp;lt;</strong>, <strong>&amp;#60;</strong> ou <strong>&amp;#x3c;</strong>). Para isso, utilizamos <strong>&amp;amp;</strong> para representar o próprio "&". Veja exemplos na tabela:</p>
+
+        <h4>Exemplos de Entidades</h4>
+        <table border="1">
+            <tr>
+                <th>Caractere</th>
+                <th>Entidade Nomeada</th>
+                <th>Entidade Decimal</th>
+                <th>Entidade Hexadecimal</th>
+                <th>Uso</th>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>&amp;lt;</td>
+                <td>&amp;#60;</td>
+                <td>&amp;#x3c;</td>
+                <td>Tag HTML</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>&amp;amp;</td>
+                <td>&amp;#38;</td>
+                <td>&amp;#x26;</td>
+                <td>E comercial isolado</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>&amp;gt;</td>
+                <td>&amp;#62;</td>
+                <td>&amp;#x3e;</td>
+                <td>Fechamento de tags</td>
+            </tr>
+            <tr>
+                <td>&quot;</td>
+                <td>&amp;quot;</td>
+                <td>&amp;#34;</td>
+                <td>&amp;#x22;</td>
+                <td>Aspas em atributos</td>
+            </tr>
+            <tr>
+                <td>&apos;</td>
+                <td>&amp;apos;</td>
+                <td>&amp;#39;</td>
+                <td>&amp;#x27;</td>
+                <td>Apostrofo (XML)</td>
+            </tr>
+        </table>
+
+        <h4>Caso Especial: &amp; Sozinho</h4>
+        <p>Para exibir um "&" isolado:
+            <br><code>&amp;amp;</code> → &amp;
+            <br><code>&amp;#38;</code> → &amp;
+            <br><code>&amp;#x26;</code> → &amp;
+        </p>
+
+        <h4>Exemplo Complexo</h4>
+        <pre><code>
+    &lt;div&gt;
+        &amp;lt;h1&amp;gt;Título&amp;lt;/h1&amp;gt;
+        &amp;lt;p&amp;gt;Texto com &amp;amp; e &amp;lt;tags&amp;gt;&amp;lt;/p&amp;gt;
+    &lt;/div&gt;
+        </code></pre>
+        <p>Renderiza como:</p>
+        <div style="background: #f0f0f0; padding: 10px;">
+            &lt;h1&gt;Título&lt;/h1&gt;<br>
+            &lt;p&gt;Texto com &amp; e &lt;tags&gt;&lt;/p&gt;
+        </div>
+
+        <h4>Boas Práticas</h4>
+        <ul>
+            <li>Sempre termine entidades com <strong>;</strong></li>
+            <li>Prefira entidades nomeadas para melhor legibilidade (<code>&amp;lt;</code> vs <code>&amp;#60;</code>)</li>
+            <li>Em conteúdo dinâmico, sanitize entidades para prevenir XSS</li>
+        </ul>
+
+        <h4>Curiosidade</h4>
+        <p>Para exibir as entidades literalmente (como texto):
+            <br><code>&amp;amp;amp;</code> → &amp;amp;
+            <br><code>&amp;amp;#60;</code> → &amp;#60;
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h3>O que são comentários e como posso utilizá-los em HTML, JavaScript e CSS?</h3>
+        <p>Comentários podem ser muito úteis para dar orientações ou lembretes para todos aqueles que acessarem o código. Mas dependendo de qual linguagem, seja essa linguagem de marcação ou programação, a forma de se comentar pode variar. E isso ocorre com o HTML, CSS e JavaScript. Vamos conferir a próxima tabela:</p>
+
+        <div class="tabela-comparativa">
+            <table border="1">
+                <tr>
+                    <th>Linguagem</th>
+                    <th>Comentário de Linha Única</th>
+                    <th>Comentário de Múltiplas Linhas</th>
+                    <th>Exemplo Prático</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Não possui</td>
+                    <td>&lt;!-- Comentário --&gt;</td>
+                    <td>&lt;!-- Menu principal --&gt;<br>&lt;nav&gt;...&lt;/nav&gt;</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>/* Comentário */</td>
+                    <td>/* Comentário<br>Multi-linha */</td>
+                    <td>.botao {<br>&nbsp;&nbsp;color: red; /* Cor antiga */<br>}</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>// Comentário</td>
+                    <td>/* Comentário<br>Multi-linha */</td>
+                    <td>const preco = 99.90; // Preço em reais</td>
+                </tr>
+            </table>
+        </div>
+
+        <h4>Exemplos Detalhados</h4>
+
+        <div class="exemplo-html">
+            <h5>HTML</h5>
+            <pre><code>&lt;!--
+        Bloco comentado:
+        &lt;div class="old-version"&gt;
+            Conteúdo antigo
+        &lt;/div&gt;
+    --&gt;
+    &lt;header&gt;
+        &lt;!-- Logo principal --&gt;
+        &lt;img src="logo.png"&gt;
+    &lt;/header&gt;</code></pre>
+        </div>
+
+        <div class="exemplo-css">
+            <h5>CSS</h5>
+            <pre><code>/* Estilo da navbar */
+    nav {
+        padding: 1rem;
+        /*
+        background: blue; - Cor alterada em 01/01
+        */
+        background: #2e2e2e;
+    }</code></pre>
+        </div>
+
+        <div class="exemplo-js">
+            <h5>JavaScript</h5>
+            <pre><code>function calcularTotal() {
+        /* 
+        Fórmula antiga:
+        return quantidade * preco * 1.1;
+        */
+
+        // Nova fórmula com desconto progressivo
+        return quantidade * (preco - desconto);
+    }</code></pre>
+        </div>
+
+        <div class="alertas">
+            <h4>⚠️ Cuidados Importantes</h4>
+            <ul>
+                <li>Em HTML, evite <strong>comentários aninhados</strong>: &lt;!-- &lt;!-- Comentário --&gt; --&gt;</li>
+                <li>No CSS, <code>// Comentário</code> só funciona em pré-processadores como Sass</li>
+                <li>Em JS, comentários não fechados <code>/* ...</code> quebram o código</li>
+                <li>Nunca deixe dados sensíveis em comentários (senhas, chaves de API)</li>
+            </ul>
+        </div>
+
+        <div class="dicas-uso">
+            <h4>💡 Dicas de Utilização</h4>
+            <ul>
+                <li>Use para documentar funções complexas</li>
+                <li>Mantenha comentários breves e objetivos</li>
+                <li>Utilize tags como TODO ou FIXME para marcações:
+                    <br><code>&lt;!-- TODO: Atualizar link --&gt;</code>
+                </li>
+                <li>Em IDEs, use atalhos:
+                    <ul>
+                        <li>Ctrl + / (Windows) ou Cmd + / (Mac)</li>
+                        <li>Shift + Alt + A no VS Code para blocos</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
